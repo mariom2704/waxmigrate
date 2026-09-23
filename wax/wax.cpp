@@ -1,8 +1,8 @@
-// mxparam.cpp : Definiert den Einstiegspunkt für die Anwendung.
+// wax.cpp : Definiert den Einstiegspunkt für die Anwendung.
 //
 
 #include "framework.h"
-#include "mxparam.h"
+#include "wax.h"
 
 #define MAX_LOADSTRING 100
 
@@ -29,7 +29,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     // Globale Zeichenfolgen initialisieren
     LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
-    LoadStringW(hInstance, IDC_MXPARAM, szWindowClass, MAX_LOADSTRING);
+    LoadStringW(hInstance, IDC_WAX, szWindowClass, MAX_LOADSTRING);
     MyRegisterClass(hInstance);
 
     // Anwendungsinitialisierung ausführen:
@@ -38,7 +38,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         return FALSE;
     }
 
-    HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_MXPARAM));
+    HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_WAX));
 
     MSG msg;
 
@@ -73,10 +73,10 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
     wcex.cbClsExtra     = 0;
     wcex.cbWndExtra     = 0;
     wcex.hInstance      = hInstance;
-    wcex.hIcon          = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_MXPARAM));
+    wcex.hIcon          = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_WAX));
     wcex.hCursor        = LoadCursor(nullptr, IDC_ARROW);
     wcex.hbrBackground  = (HBRUSH)(COLOR_WINDOW+1);
-    wcex.lpszMenuName   = MAKEINTRESOURCEW(IDC_MXPARAM);
+    wcex.lpszMenuName   = MAKEINTRESOURCEW(IDC_WAX);
     wcex.lpszClassName  = szWindowClass;
     wcex.hIconSm        = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
 
